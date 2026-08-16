@@ -9,6 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .brand-copy strong{white-space:nowrap}
+    .trust-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;align-items:stretch}
+    .trust-row.trust-logos .trust-logo{min-width:0;min-height:72px;padding:10px 12px;border:1px solid #e5eaf0;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center}
+    .trust-row.trust-logos .trust-logo img{display:block;width:100%;height:50px;object-fit:contain;object-position:center}
+    @media(max-width:900px){.trust-logos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:520px){.brand-copy strong{white-space:normal}.trust-logos{grid-template-columns:1fr 1fr}}
+  </style>
 </head>
 <body>
 <header class="site-header" id="top">
