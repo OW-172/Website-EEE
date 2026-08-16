@@ -99,11 +99,11 @@
   transform:translateX(-2%) scale(1.04);
 }
 
-/* MFH, Gewerbe, Öffentlich: nur E-CAD mit größerem Bildausschnitt / weniger Zoom */
+/* MFH, Gewerbe, Öffentlich: E-CAD zurückgesetzt, nur leicht herausgezoomt */
 .compare-frame[data-key="mfh"] .compare-overlay .compare-img,
 .compare-frame[data-key="gewerbe"] .compare-overlay .compare-img,
 .compare-frame[data-key="oeffentlich"] .compare-overlay .compare-img{
-  object-fit:contain;
-  object-position:left center;
-  transform:none;
+  object-fit:cover;
+  object-position:50% 50%;
+  transform:translateX(-3%) scale(1.02);
 }
