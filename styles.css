@@ -101,6 +101,7 @@
 
 /* MFH, Gewerbe, Öffentlich: E-CAD zurückgesetzt, nur leicht herausgezoomt */
 .compare-frame[data-key="mfh"] .compare-overlay .compare-img,
+.compare-frame[data-key="fertigung"] .compare-overlay .compare-img,
 .compare-frame[data-key="buero"] .compare-overlay .compare-img,
 .compare-frame[data-key="oeffentlich"] .compare-overlay .compare-img{
   object-fit:cover;
