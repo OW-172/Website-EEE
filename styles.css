@@ -24,3 +24,65 @@
   object-fit:cover;
   display:block;
 }
+
+
+/* V11 – Header und Qualifikationslogos */
+.brand-copy strong{
+  white-space:nowrap;
+}
+
+.trust-logos{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+  align-items:stretch;
+}
+
+.trust-logos .trust-logo{
+  min-width:0;
+  min-height:72px;
+  padding:10px 12px;
+  border:1px solid #e5eaf0;
+  border-radius:10px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.trust-logos .trust-logo img{
+  display:block;
+  width:100%;
+  height:50px;
+  object-fit:contain;
+  object-position:center;
+}
+
+@media (max-width: 900px){
+  .trust-logos{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 520px){
+  .brand-copy strong{
+    white-space:normal;
+  }
+  .trust-logos{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+.hero-blue{color:#0466b2;}
+
+/* V12.0 – ausschließlich neue Icons im hellblauen Nutzenbalken */
+.benefit-icon svg{
+  width:30px;
+  height:30px;
+  display:block;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}

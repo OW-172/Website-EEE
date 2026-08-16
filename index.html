@@ -9,17 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .brand-copy strong{white-space:nowrap}
-    .trust-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;align-items:stretch}
-    .trust-row.trust-logos .trust-logo{min-width:0;min-height:72px;padding:10px 12px;border:1px solid #e5eaf0;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center}
-    .trust-row.trust-logos .trust-logo img{display:block;width:100%;height:50px;object-fit:contain;object-position:center}
-    @media(max-width:900px){.trust-logos{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:520px){.brand-copy strong{white-space:normal}.trust-logos{grid-template-columns:1fr 1fr}}
-  </style>
 </head>
-<body>
-<header class="site-header" id="top">
+<body id="top">
+<header class="site-header">
   <div class="container nav-wrap">
     <a class="brand" href="#top" aria-label="TALUS Energieberatung Startseite">
       <img src="assets/logo.png" alt="TALUS Logo" />
@@ -41,10 +33,10 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy reveal visible">
-        <p class="eyebrow">Energieberatung, iSFP &amp; Fachplanung</p>
-        <h1>Energetisch sanieren.<br>Fundiert entscheiden.</h1>
+        <p class="eyebrow">Energieberatung - iSFP - Fachplanung - Sanierung</p>
+        <h1>Ihr Haus.<br><span class="hero-blue">Effizienter.</span><br>Wertvoller.</h1>
         <div class="title-line"></div>
-        <p class="lead">Energieberatung, individueller Sanierungsfahrplan und energetische Fachplanung für Wohngebäude rund um Bodensee, Hegau und Oberschwaben.</p>
+        <p class="lead">Professionelle Energieberatung für Wohngebäude – von der ersten Analyse bis zur geförderten Sanierung, herstellerneutral, präzise – immer an Ihrer Seite.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#kontakt">Erstgespräch vereinbaren <span>→</span></a>
           <a class="btn btn-ghost" href="#leistungen">Leistungen entdecken <span>→</span></a>
@@ -67,10 +59,10 @@
 
   <section class="benefit-strip">
     <div class="container benefit-grid">
-      <div class="benefit-item"><span class="benefit-icon">⌂</span><div><h3>Ein Gebäude verstehen</h3><p>Wir erfassen Ihr Gebäude digital und detailliert.</p></div></div>
-      <div class="benefit-item"><span class="benefit-icon">◇</span><div><h3>Effizienz bewerten</h3><p>Wir analysieren die energetische Qualität und erkennen Potenziale.</p></div></div>
-      <div class="benefit-item"><span class="benefit-icon">▣</span><div><h3>Maßnahmen planen</h3><p>Wir entwickeln Sanierungsvarianten und zeigen, was sich lohnt.</p></div></div>
-      <div class="benefit-item"><span class="benefit-icon">♙</span><div><h3>Umsetzung begleiten</h3><p>Wir unterstützen Sie von der Planung bis zur Umsetzung.</p></div></div>
+      <div class="benefit-item"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><path d="M6 15.5 16 7l10 8.5V26H6Z"/><path d="M12 26V18h8v8"/></svg></span><div><h3>Ein Gebäude verstehen</h3><p>Wir erfassen Ihr Gebäude digital und detailliert.</p></div></div>
+      <div class="benefit-item"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><path d="M6 23a10 10 0 1 1 20 0"/><path d="m16 22 6-7"/><path d="M10 23h12"/><path d="M8.5 18.5 6 17M23.5 18.5 26 17M16 13v-3"/></svg></span><div><h3>Effizienz bewerten</h3><p>Wir analysieren die energetische Qualität und erkennen Potenziale.</p></div></div>
+      <div class="benefit-item"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><path d="M8 5h13l3 3v19H8Z"/><path d="M21 5v4h4M12 14h8M12 18h5"/><path d="m13 23 2 2 5-5"/></svg></span><div><h3>Maßnahmen planen</h3><p>Wir entwickeln Sanierungsvarianten und zeigen, was sich lohnt.</p></div></div>
+      <div class="benefit-item"><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><path d="M21 6a6 6 0 0 0-3 8L8 24l3 3 10-10a6 6 0 0 0 7-7l-4 4-4-4 4-4a6 6 0 0 0-3 0Z"/></svg></span><div><h3>Umsetzung begleiten</h3><p>Wir unterstützen Sie von der Planung bis zur Umsetzung.</p></div></div>
     </div>
   </section>
 
@@ -83,10 +75,10 @@
       </div>
       <div class="service-grid">
         <article class="service-card reveal"><div class="card-icon">▣</div><h3>Energieberatung</h3><p>Individuelle Beratung für Wohngebäude, verständlich und praxisnah.</p><a href="#kontakt">Mehr erfahren →</a></article>
-        <article class="service-card reveal"><div class="card-icon">⌂</div><h3>iSFP – Sanierungsfahrplan</h3><p>Individueller Sanierungsfahrplan als belastbare Grundlage für Ihre Immobilie.</p><a href="#isfp">Mehr erfahren →</a></article>
-        <article class="service-card reveal"><div class="card-icon">◇</div><h3>E-CAD Gebäudemodell</h3><p>Digitale Erfassung als Basis für Analyse, Planung und Förderung.</p><a href="#ecad">Mehr erfahren →</a></article>
-        <article class="service-card reveal"><div class="card-icon">⌗</div><h3>Fachplanung</h3><p>Energetische Fachplanung für Sanierung, Neubau und Förderprojekte.</p><a href="#ablauf">Mehr erfahren →</a></article>
-        <article class="service-card reveal"><div class="card-icon">♙</div><h3>Baubegleitung</h3><p>Wir begleiten Ihr Projekt bis zur erfolgreichen Umsetzung.</p><a href="#kontakt">Mehr erfahren →</a></article>
+        <article class="service-card reveal"><div class="card-icon">⌂</div><h3>iSFP – Sanierungsfahrplan</h3><p>Individueller Sanierungsfahrplan als belastbare Grundlage für Ihre Immobilien-Sanierung.</p><a href="#isfp">Mehr erfahren →</a></article>
+        <article class="service-card reveal"><div class="card-icon">◇</div><h3>3D-Gebäudemodell</h3><p>Digitale Erfassung als Basis für Analyse, Planung und Förderung.</p><a href="#ecad">Mehr erfahren →</a></article>
+        <article class="service-card reveal"><div class="card-icon">⌗</div><h3>Heizungsoptimierung</h3><p>Heizlastberechnung nach<br>DIN EN 12831 und hydraulischer Abgleich für mehr Effizienz.</p><a href="#ablauf">Mehr erfahren →</a></article>
+        <article class="service-card reveal"><div class="card-icon">♙</div><h3>Fachplanung</h3><p>Energetische Fachplanung und Baubegleitung für Sanierung und Neubau.</p><a href="#kontakt">Mehr erfahren →</a></article>
       </div>
     </div>
   </section>
