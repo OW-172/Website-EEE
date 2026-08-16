@@ -7,8 +7,8 @@ const datasets={
  'gewerbe':['assets/gewerbe-real.jpg','assets/gewerbe-ecad.png','Gewerbegebäude'],
  'oeffentlich':['assets/oeffentlich-real.png','assets/oeffentlich-ecad.png','Öffentliches Gebäude']
 };
-const realImage=document.getElementById('realImage'),cadImage=document.getElementById('cadImage'),overlay=document.getElementById('compareOverlay'),line=document.getElementById('compareLine'),range=document.getElementById('compareRange');
+const realImage=document.getElementById('realImage'),cadImage=document.getElementById('cadImage'),overlay=document.getElementById('compareOverlay'),line=document.getElementById('compareLine'),range=document.getElementById('compareRange'),compareFrame=document.getElementById('compareFrame');
 function setCompare(v){overlay.style.clipPath=`inset(0 0 0 ${v}%)`;line.style.left=`${v}%`}
-range?.addEventListener('input',e=>setCompare(e.target.value));setCompare(50);
-function choose(key){const d=datasets[key];if(!d)return;realImage.src=d[0];cadImage.src=d[1];realImage.alt=`Reales ${d[2]}`;cadImage.alt=`E-CAD Modell ${d[2]}`;range.value=50;setCompare(50);document.querySelectorAll('.ecad-tab').forEach(b=>b.classList.toggle('active',b.dataset.key===key));document.getElementById('ecad')?.scrollIntoView({behavior:'smooth',block:'start'})}
+range?.addEventListener('input',e=>setCompare(e.target.value));compareFrame?.setAttribute('data-key','1fam');setCompare(50);
+function choose(key){const d=datasets[key];if(!d)return;compareFrame?.setAttribute('data-key',key);realImage.src=d[0];cadImage.src=d[1];realImage.alt=`Reales ${d[2]}`;cadImage.alt=`E-CAD Modell ${d[2]}`;range.value=50;setCompare(50);document.querySelectorAll('.ecad-tab').forEach(b=>b.classList.toggle('active',b.dataset.key===key));document.getElementById('ecad')?.scrollIntoView({behavior:'smooth',block:'start'})}
 document.querySelectorAll('.ecad-tab').forEach(b=>b.addEventListener('click',()=>choose(b.dataset.key)));document.querySelectorAll('.project-open').forEach(b=>b.addEventListener('click',()=>choose(b.dataset.key)));
