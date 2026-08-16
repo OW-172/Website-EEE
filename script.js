@@ -4,7 +4,7 @@ const datasets={
  '1fam':['assets/1fam-real.jpg','assets/1fam-ecad.png','Einfamilienhaus'],
  '2fam':['assets/2fam-real.jpg','assets/2fam-ecad.png','Zweifamilienhaus'],
  'mfh':['assets/mfh-real.jpg','assets/mfh-ecad.png','Mehrfamilienhaus'],
- 'gewerbe':['assets/gewerbe-real.jpg','assets/gewerbe-ecad.png','Gewerbegebäude'],
+ 'buero':['assets/buero-real.svg','assets/buero-ecad.svg','Bürogebäude'],
  'oeffentlich':['assets/oeffentlich-real.png','assets/oeffentlich-ecad.png','Öffentliches Gebäude']
 };
 const realImage=document.getElementById('realImage'),cadImage=document.getElementById('cadImage'),overlay=document.getElementById('compareOverlay'),line=document.getElementById('compareLine'),range=document.getElementById('compareRange'),compareFrame=document.getElementById('compareFrame');
