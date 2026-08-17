@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body id="top">
 <header class="site-header">
@@ -184,20 +185,22 @@
 
   <section class="contact section-pad" id="kontakt">
     <div class="container contact-grid">
-      <div class="contact-copy reveal"><p class="eyebrow light">Erstgespräch</p><h2>Sie möchten wissen, wie Sie Ihr Gebäude sinnvoll sanieren können?</h2><p>In einem kurzen telefonischen Erstgespräch klären wir Ihr Vorhaben und welche Beratung dafür sinnvoll ist.</p><div class="contact-badges"><span>telefonisch</span><span>max. 15 Min.</span><span>unverbindlich</span></div><a class="btn btn-light" href="tel:+490000000000">Jetzt anrufen</a><p class="placeholder-note">Telefonnummer bitte noch ersetzen.</p></div>
+      <div class="contact-copy reveal"><p class="eyebrow light">Erstgespräch</p><h2>Sie möchten wissen, wie Sie Ihr Gebäude sinnvoll sanieren können?</h2><p>In einem kurzen telefonischen Erstgespräch klären wir Ihr Vorhaben und welche Beratung dafür sinnvoll ist.</p><div class="contact-badges"><span>telefonisch</span><span>max. 15 Min.</span><span>unverbindlich</span></div><a class="btn btn-light" href="tel:+4977328023376">Jetzt anrufen</a><p class="placeholder-note">+49 7732 8023376</p></div>
       <form class="contact-form reveal" id="anfrageformular" onsubmit="event.preventDefault();document.getElementById('formMsg').textContent='Danke! In diesem Prototyp wird noch keine Nachricht versendet.';">
-        <div class="field-row"><label>Name<input type="text" required></label><label>Telefon<input type="tel"></label></div>
+        <div class="field-row"><label>Name<input type="text" required></label><label>Telefon<input type="tel" required></label></div>
         <div class="field-row"><label>E-Mail<input type="email" required></label><label>PLZ / Ort<input type="text"></label></div>
-        <label>Gebäudeart<select><option>Ein-/Zweifamilienhaus</option><option>Mehrfamilienhaus</option><option>WEG</option><option>Gewerbe / Öffentlich</option><option>Sonstiges</option></select></label>
-        <label>Worum geht es?<select><option>iSFP / Sanierungsfahrplan</option><option>Sanierung / Baubegleitung</option><option>3D-Gebäudemodell</option><option>Heizung / Heizlast</option><option>Fördermittel</option><option>Sonstiges</option></select></label>
+        <label>Gebäudeart<select><option>Einfamilienhaus / Zweifamilienhaus</option><option>Mehrfamilienhaus</option><option>Nichtwohngebäude</option></select></label>
+        <label>Worum geht es?<select><option>Energieberatung</option><option>iSFP / Sanierungsfahrplan</option><option>Sanierung / Baubegleitung</option><option>3D-Gebäudemodell</option><option>Heizung / Heizlast / hydr. Abgleich</option><option>Sonstiges</option></select></label>
         <label>Nachricht<textarea rows="5" placeholder="Kurz zum Gebäude und Vorhaben …"></textarea></label>
+        <p class="form-msg">Hinweise zur Verarbeitung Ihrer Daten finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+        <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA"></div>
         <button class="btn btn-dark" type="submit">Erstgespräch anfragen</button><p id="formMsg" class="form-msg" aria-live="polite"></p>
       </form>
     </div>
   </section>
 </main>
 
-<footer class="footer"><div class="container footer-grid"><div class="brand footer-brand"><img src="assets/logo.png" alt="TALUS Logo"><span>Energieberatung rund um den Bodensee</span></div><p>Bodensee · Hegau · Oberschwaben</p><div class="footer-links"><a href="#">Impressum</a><a href="#">Datenschutz</a></div></div></footer>
+<footer class="footer"><div class="container footer-grid"><div class="brand footer-brand"><img src="assets/logo.png" alt="TALUS Logo"><span>Energieberatung rund um den Bodensee</span></div><p>Bodensee · Hegau · Oberschwaben</p><div class="footer-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div></footer>
 <script src="script.js"></script>
 </body>
 </html>
