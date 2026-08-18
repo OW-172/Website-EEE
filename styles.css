@@ -208,3 +208,32 @@
     grid-template-columns:repeat(4,minmax(0,1fr));
   }
 }
+
+/* V18.4 – Hauptnavigation vor Überschneidung kompakter */
+@media (max-width:1500px) and (min-width:1151px){
+  .nav-wrap{
+    gap:18px;
+  }
+  .brand{
+    gap:14px;
+    flex:0 0 auto;
+  }
+  .brand img{
+    width:125px;
+    height:78px;
+  }
+  .brand-copy strong{
+    font-size:1.12rem;
+  }
+  .brand-copy small{
+    font-size:.98rem;
+  }
+  .nav{
+    gap:22px;
+    font-size:.92rem;
+    white-space:nowrap;
+  }
+  .nav a{
+    white-space:nowrap;
+  }
+}
