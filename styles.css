@@ -142,3 +142,53 @@
 .contact-detail-address svg{
   margin-top:2px;
 }
+
+/* V17.0 – FAQ */
+.faq{
+  background:#f8fbff;
+}
+.faq-wrap{
+  max-width:980px;
+}
+.faq-list{
+  border-top:1px solid var(--line);
+}
+.faq-item{
+  border-bottom:1px solid var(--line);
+}
+.faq-item summary{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:22px 0;
+  font-family:Manrope,Inter,sans-serif;
+  font-size:1.02rem;
+  font-weight:700;
+}
+.faq-item summary::-webkit-details-marker{
+  display:none;
+}
+.faq-item summary b{
+  flex:0 0 30px;
+  width:30px;
+  height:30px;
+  display:grid;
+  place-items:center;
+  color:var(--blue);
+  font-size:1.45rem;
+  font-weight:500;
+  line-height:1;
+  transition:transform .2s ease;
+}
+.faq-item[open] summary b{
+  transform:rotate(45deg);
+}
+.faq-item p{
+  margin:-6px 56px 22px 0;
+  color:var(--muted);
+  font-size:.96rem;
+  line-height:1.65;
+}
