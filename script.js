@@ -13,3 +13,14 @@ function setCompare(v){overlay.style.clipPath=`inset(0 0 0 ${v}%)`;line.style.le
 range?.addEventListener('input',e=>setCompare(e.target.value));compareFrame?.setAttribute('data-key','1fam');setCompare(50);
 function choose(key){const d=datasets[key];if(!d)return;compareFrame?.setAttribute('data-key',key);realImage.src=d[0];cadImage.src=d[1];realImage.alt=`Reales ${d[2]}`;cadImage.alt=`3D-Gebäudemodell ${d[2]}`;range.value=50;setCompare(50);document.querySelectorAll('.ecad-tab').forEach(b=>b.classList.toggle('active',b.dataset.key===key));document.getElementById('ecad')?.scrollIntoView({behavior:'smooth',block:'start'})}
 document.querySelectorAll('.ecad-tab').forEach(b=>b.addEventListener('click',()=>choose(b.dataset.key)));document.querySelectorAll('.project-open').forEach(b=>b.addEventListener('click',()=>choose(b.dataset.key)));
+
+// V17.3 – FAQ: immer nur ein Eintrag gleichzeitig geöffnet
+const faqItems=document.querySelectorAll('.faq-item');
+faqItems.forEach(item=>{
+  item.addEventListener('toggle',()=>{
+    if(!item.open)return;
+    faqItems.forEach(other=>{
+      if(other!==item)other.open=false;
+    });
+  });
+});
