@@ -201,3 +201,29 @@
     font-size:.96rem;
   }
 }
+
+/* V17.8 – Verbands-/Behördenlogos im Hochformat kompakt halten */
+@media (orientation: portrait) and (max-width: 900px){
+  .trust-logos{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+}
+
+/* V17.9 – iPad Pro 13" Hochformat: Hauptmenü kompakter */
+@media (orientation: portrait) and (min-width: 901px) and (max-width: 1150px){
+  .nav-wrap{
+    gap:8px;
+  }
+  .brand{
+    flex:0 0 auto;
+  }
+  .nav{
+    flex:0 0 auto;
+    gap:8px;
+    font-size:.72rem;
+    white-space:nowrap;
+  }
+  .nav a{
+    white-space:nowrap;
+  }
+}
