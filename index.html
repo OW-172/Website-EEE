@@ -280,10 +280,10 @@
 </div></div>
       <form class="contact-form reveal" id="anfrageformular" action="send-form.php" method="post">
         <div class="field-row"><label>Name<input type="text" name="name" autocomplete="name" maxlength="120" required></label><label>Telefon<input type="tel" name="telefon" autocomplete="tel" maxlength="60" required></label></div>
-        <div class="field-row"><label>E-Mail<input type="email" name="email" autocomplete="email" maxlength="160" required></label><label>PLZ / Ort<input type="text" name="ort" autocomplete="postal-code" maxlength="120"></label></div>
+        <div class="field-row"><label>E-Mail<input type="email" name="email" autocomplete="email" maxlength="160" required></label><label>PLZ und/oder Ort<input type="text" name="ort" autocomplete="postal-code" minlength="5" maxlength="120" required></label></div>
         <label>Gebäudeart<select name="gebaeudeart"><option>Einfamilienhaus / Zweifamilienhaus</option><option>Mehrfamilienhaus</option><option>Nichtwohngebäude</option></select></label>
         <label>Worum geht es?<select name="thema"><option>Energieberatung</option><option>iSFP / Sanierungsfahrplan</option><option>Sanierung / Baubegleitung</option><option>3D-Gebäudemodell</option><option>Heizung / Heizlast / hydr. Abgleich</option><option>Sonstiges</option></select></label>
-        <label>Nachricht<textarea name="nachricht" rows="5" maxlength="4000" placeholder="Kurz zum Gebäude und Vorhaben …"></textarea></label>
+        <label>Nachricht<textarea name="nachricht" rows="5" minlength="10" maxlength="4000" required placeholder="Kurz zum Gebäude und Vorhaben …"></textarea></label>
         <p class="form-msg">Hinweise zur Verarbeitung Ihrer Daten finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAETtpcL-kAU3OXK6" data-size="flexible" data-action="kontaktformular"></div>
         <button class="btn btn-dark" type="submit">Erstgespräch anfragen</button><p id="formMsg" class="form-msg" aria-live="polite"></p>
