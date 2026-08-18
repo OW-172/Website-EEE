@@ -24,3 +24,43 @@ faqItems.forEach(item=>{
     });
   });
 });
+
+// V18.2 – Produktiver Kontaktformular-Versand mit Cloudflare Turnstile
+const contactForm=document.getElementById('anfrageformular');
+const formMsg=document.getElementById('formMsg');
+contactForm?.addEventListener('submit',async event=>{
+  event.preventDefault();
+  const submitButton=contactForm.querySelector('button[type="submit"]');
+  const originalText=submitButton?.textContent||'Erstgespräch anfragen';
+
+  if(formMsg)formMsg.textContent='Nachricht wird gesendet …';
+  if(submitButton){
+    submitButton.disabled=true;
+    submitButton.textContent='Wird gesendet …';
+  }
+
+  try{
+    const response=await fetch(contactForm.action,{
+      method:'POST',
+      body:new FormData(contactForm),
+      headers:{'Accept':'application/json'}
+    });
+    const result=await response.json().catch(()=>({success:false,message:'Beim Versand ist ein technischer Fehler aufgetreten.'}));
+
+    if(!response.ok||!result.success){
+      throw new Error(result.message||'Die Nachricht konnte nicht gesendet werden.');
+    }
+
+    if(formMsg)formMsg.textContent=result.message||'Danke! Ihre Anfrage wurde erfolgreich versendet.';
+    contactForm.reset();
+    if(window.turnstile)window.turnstile.reset();
+  }catch(error){
+    if(formMsg)formMsg.textContent=error.message||'Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder rufen Sie uns an.';
+    if(window.turnstile)window.turnstile.reset();
+  }finally{
+    if(submitButton){
+      submitButton.disabled=false;
+      submitButton.textContent=originalText;
+    }
+  }
+});

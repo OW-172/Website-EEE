@@ -1,0 +1,28 @@
+TALUS – Kontaktformular / Cloudflare Turnstile
+
+Der öffentliche Site Key ist bereits in index.html eingebaut:
+0x4AAAAAAETtpcL-kAU3OXK6
+
+Für den produktiven Betrieb auf IONOS fehlt nur noch der private Secret Key:
+
+1. Datei
+   private/turnstile-secret.php.example
+   kopieren und in
+   private/turnstile-secret.php
+   umbenennen.
+
+2. In dieser neuen Datei den Platzhalter
+   HIER_CLOUDFLARE_TURNSTILE_SECRET_KEY_EINTRAGEN
+   durch den Secret Key aus dem Cloudflare-Turnstile-Dashboard ersetzen.
+
+3. Den kompletten Website-Ordner auf IONOS übertragen.
+   private/turnstile-secret.php darf NICHT in GitHub eingecheckt werden.
+   Die .gitignore ist dafür bereits vorbereitet.
+
+Alternativ kann auf dem Server die Umgebungsvariable TURNSTILE_SECRET_KEY
+gesetzt werden. Dann ist keine turnstile-secret.php erforderlich.
+
+Das Formular sendet serverseitig über send-form.php an:
+info@talus-eb.de
+
+Cloudflare Turnstile wird vor dem Mailversand serverseitig über Siteverify geprüft.
