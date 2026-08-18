@@ -108,3 +108,37 @@
   object-position:50% 50%;
   transform:translateX(-3%) scale(1.07);
 }
+
+/* V16.12 – Kontaktdaten mit Icons */
+.contact-details{
+  display:grid;
+  gap:18px;
+  margin-top:20px;
+  color:#d5e9f7;
+  font-size:1rem;
+  line-height:1.55;
+}
+.contact-detail{
+  display:grid;
+  grid-template-columns:24px 1fr;
+  gap:12px;
+  align-items:center;
+}
+.contact-detail svg{
+  width:22px;
+  height:22px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.9;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.contact-detail a{
+  color:inherit;
+}
+.contact-detail-address{
+  align-items:start;
+}
+.contact-detail-address svg{
+  margin-top:2px;
+}
