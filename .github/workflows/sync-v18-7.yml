@@ -58,3 +58,4 @@ jobs:
             git commit -m "Sync website to V18.7"
             git push
           fi
+# trigger
